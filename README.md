@@ -1,95 +1,30 @@
 # Team Project
 
-## Description
-The team project consists of two modules. Each module requires participants to apply the skills they have learned to date, and explore a dataset of their choosing. The first part of the team project involves creating a simple program with a database in order to analyze a dataset from an open source, such as Kaggle. In the second part of the team project, teams will come together again and apply the skills developed in each of the data science or machine learning foundations certificate streams. Teams will either create a data visualization or a machine learning model.
+## Motivation, specific objective, and success criteria for our machine learning model
+Breast cancer is the most prevalent cancer among women, representing 25% of all cancer cases in this population. Early detection is vital for improving survival rates and enabling less invasive treatment options. However, current diagnostic methods rely heavily on manual analysis of biopsy samples by pathologists, a process that is time-consuming and subjective, leading to potential inconsistencies in diagnosis.
+Our objective is to develop a predictive tool that can accurately differentiate between normal cells and invasive ductal carcinoma (IDC) cells, a common type of breast cancer. By utilizing a dataset of 277,524 image patches from pathology slides of 162 cancer patients, we aim to create a model that can significantly enhance patient outcomes and healthcare efficiency by automating the diagnostic process.
+Our success criteria is to train the model and achieve a model accuracy of at least 85% accuracy. We also plan to implement a pipeline that automates the training, evaluation, and logging to ensure reproducibility and efficiency. 
 
-Participants will work in assigned teams of 4-5. 
+## Features selection for training machine learning model 
+We selected convolutional filters in convolutional neural network (CNN) because convolutional layers can act as feature extractors to identify patterns such as edges, shapes, and even more complex shapes. 
+In our project, the model needs to differentiate between normal cells and IDC cells. Convolutional layers allows the learning of hierarchical features, starting from edges to more complex patters such as cell shapes and textures in deeper layers. A CNN model with two convolutional layers and dropout regularization was trained. Hyperparameters include learning rate and batch size. Dropout rates were adjusted to reduce overfitting and the number of epochs was varied to find optimal training duration. 
+Finally, model performance was evaluated using accuracy and loss. Validation accuracy reached 86.7%. 
 
-#### Project Descriptions
+## Preprocessing - missing values or outliers 
+To the best of our knowledge, there were no missing images. The labeling information was determined based on the folder in which each image was stored.
 
-* [First Team Project Description](./team_project_1.md)
-* [Second Team Project Description](./team_project_2.md)
+## Machine learning alorithm selection 
+The use of CNN is ideal for our task as they can efficiently detect and classify different cell types based on learned visual features, as explained above. 
 
-## Learning Outcomes
-By the end of Team Project Module 1, participants will be able to:
-* Resolve merge conflicts
-* Describe common problems or challenges a team encounters when working collaboratively using Git and GitHub
-* Create a program to analyze a dataset with contributions from multiple team members
+# Validation and hyperparameter tuning 
+We tuned the hyperparameters by experimenting with different dropout rates to mitigate overfitting and used maximum percentage of the entire dataset (80%) given our computers' processing capabilities. Additionally, we tested various numbers of training epochs to determine the optimal duration for model training. We aimed to improve the model's generalization performance and robustness by adjusting dropout rates and iterating over different training durations. 
 
-By the end of Team Project Module 2, participants will be able to:
-* Create a data visualization as a team
-* Create a machine learning model as a team
+## Dataset splitting 
+We used 80% of the entire dataset for model learning and 20% of the dataset to evaluate the final model’s performance. 
 
-### Contacts
-**Questions can be submitted to the _#cohort-3-help_ channel on Slack**
+## Potential ethical implications and biases with our model
+The dataset includes image patches taken from larger cancer images, but not all patches will contain cancer cells. As a result, the model may mistakenly learn to identify and label normal cells as cancer cells if they appear in an image patch that also contains cancer cells. This could lead to the model generating false positives, where normal cells are incorrectly classified as cancerous.
+Secondly, this dataset contains images from only 280 patients, which is small compared to the larger number of patients the algorithm will encounter once deployed. This limited dataset size increases the risk of overfitting, which means that the model might learn patterns specific to these patients rather than generalizable features applicable to a broader population. 
 
-* Technical Facilitator: 
-  * **Kamilah Ebrahim**(she/her)
-  kamilah.ebrahim@mail.utoronto.ca
-
-* Learning Support Staff:
-
-  * **Farzaneh Hashemi** (she/her )
-  fhashemi.ma@gmail.com
-  * **Tong Su** (she/her)
-  tong.su@mail.utoronto.ca
-
-### Delivery of Team Project Modules
-
-Each Team Project module will include two live learning sessions and one case study presentation. During live learning sessions, facilitators will introduce the project, walk through relevant examples, and introduce various team skills that support project success. The remaining time will be used for teams to assemble and work on their projects, as well as get help from the facilitator or the learning support to troubleshoot any issues a team may be encountering. 
-
-Work periods will also be used as opportunities for teams to collaborate and work together, while accessing learning support. 
-
-### Schedule
-
-|Day 1|Day 2|Day 3|Day 4|Day 5|
-|-----|-----|-----|-----|-----|
-|Live Learning Session |Live Learning Session|Case Study|Work Period|Work Period|
-
-## Requirements
-* Participants are expected to attend live learning sessions and the case study as part of the learning experience. Participants are encouraged to use the scheduled work period time to complete their projects.
-* Participants are encouraged to ask questions and collaborate with others to enhance learning.
-* Participants must have a computer and an internet connection to participate in online activities.
-* Participants must not use generative AI such as ChatGPT to generate code to complete assignments. It should be used as a supportive tool to seek out answers to questions you may have.
-* We expect participants to have completed the [onboarding repo](https://github.com/UofT-DSI/onboarding/tree/main/onboarding_documents).
-* We encourage participants to default to having their camera on at all times, and turning the camera off only as needed. This will greatly enhance the learning experience for all participants and provides real-time feedback for the instructional team. 
-
-### How to get help
-![image](/steps-to-ask-for-help.png)
-
-## Folder Structure
-
-### Project 1
-```markdown
-|-- data
-|---- processed
-|---- raw
-|---- sql
-|-- reports
-|-- src
-|-- README.md
-|-- .gitignore
-```
-
-### Project 2
-```markdown
-|-- data
-|---- processed
-|---- raw
-|---- sql
-|-- experiments
-|-- models
-|-- reports
-|-- src
-|-- README.md
-|-- .gitignore
-```
-
-* **Data:** Contains the raw, processed and final data. For any data living in a database, make sure to export the tables out into the `sql` folder, so it can be used by anyone else.
-* **Experiments:** A folder for experiments
-* **Models:** A folder containing trained models or model predictions
-* **Reports:** Generated HTML, PDF etc. of your report
-* **src:** Project source code
-* README: This file!
-* .gitignore: Files to exclude from this folder, specified by the Technical Facilitator
-
+## Documentation for future reference 
+Documenting machine learning pipeline and model architecture is critical for ensuring reproducibility and providing clarity. Key aspects of the project, including preprocessing, model training, and hyperparameter tuning, were documented either directly in the code or in the README file.

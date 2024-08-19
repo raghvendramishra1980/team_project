@@ -32,7 +32,7 @@ Documenting machine learning pipeline and model architecture is critical for ens
 ## Link to individual videos
 Ihor Kylymchuk: 
 
-Raghvendra Mishra: 
+Raghvendra Mishra: https://drive.google.com/file/d/11RoL_NOKiAdV3-AzVKE-iRVmA_eLhXTA/view?usp=share_link
 
 Jia xin (Janet) Jiang: https://drive.google.com/file/d/1anTjSK138OFp2uDgmexPOh4iXjU5EYtr/view?usp=drive_link
 

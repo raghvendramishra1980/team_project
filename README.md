@@ -33,5 +33,11 @@ Documenting machine learning pipeline and model architecture is critical for ens
 "/src/" directory contain source code files
 "data/processed/ " directory contain *.pkl files with preprocessed data sets.
 
-Link to individual videos
-Ihor Kylymchuk: 
+## Link to individual videos
+Ihor Kylymchuk: https://drive.google.com/file/d/1T4__1tZAdlX4LlL_KtLa3AeV4LpkR9n6/view?usp=sharing
+
+Raghvendra Mishra: https://drive.google.com/file/d/11RoL_NOKiAdV3-AzVKE-iRVmA_eLhXTA/view?usp=share_link
+
+Jia xin (Janet) Jiang: https://drive.google.com/file/d/1anTjSK138OFp2uDgmexPOh4iXjU5EYtr/view?usp=drive_link
+
+Parva Thakker: 

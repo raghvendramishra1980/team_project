@@ -29,8 +29,12 @@ Secondly, this dataset contains images from only 280 patients, which is small co
 ## Documentation for future reference 
 Documenting machine learning pipeline and model architecture is critical for ensuring reproducibility and providing clarity. Key aspects of the project, including preprocessing, model training, and hyperparameter tuning, were documented either directly in the code or in the README file.
 
+## Repositori structure
+"/src/" directory contain source code files
+"data/processed/ " directory contain *.pkl files with preprocessed data sets.
+
 ## Link to individual videos
-Ihor Kylymchuk: 
+Ihor Kylymchuk: https://drive.google.com/file/d/1T4__1tZAdlX4LlL_KtLa3AeV4LpkR9n6/view?usp=sharing
 
 Raghvendra Mishra: https://drive.google.com/file/d/11RoL_NOKiAdV3-AzVKE-iRVmA_eLhXTA/view?usp=share_link
 
